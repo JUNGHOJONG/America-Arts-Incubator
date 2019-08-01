@@ -90,7 +90,6 @@ let lengthSize= 60;
 let resetButton;///////////watch!!!!!!!
 
 function setup() {
-
     createCanvas(windowWidth, windowWidth/8);//windowHeight
     startTracking(); 
     textFont("Bradley Hand");
@@ -99,14 +98,12 @@ function setup() {
 }
 
 function draw() {
-
     background(0);
 
     for (let i = 0; i < 30; i++) {
         hall[i].display();
         hall[i].update();
     }
-
     for (let i = 0; i < 14; i++) {
         letter_mother[i].display();
         if (change[0] && change[5] && change[10]) {
@@ -114,7 +111,6 @@ function draw() {
             letter_mother[i].time(); 
         }
     }
-
     for (let i = 0; i < 14; i++) {
         letter_father[i].display();
         if (change[1] && change[6] && change[11]) {
@@ -122,7 +118,6 @@ function draw() {
             letter_father[i].time();
         }
     }
-
     for (let i = 0; i < 12; i++) {
         letter_aunt[i].display();
         if (change[2] && change[7] && change[12]) {
@@ -130,7 +125,6 @@ function draw() {
             letter_aunt[i].time();
         }
     }
-
     for (let i = 0; i < 14; i++) {
         letter_sister[i].display();
         if (change[3] && change[8] && change[13]) {
@@ -138,7 +132,6 @@ function draw() {
             letter_sister[i].time();
         }
     }
-
     for (let i = 0; i < 15; i++) {
         letter_brother[i].display();
         if (change[4] && change[9] && change[14]) {
@@ -146,7 +139,6 @@ function draw() {
             letter_brother[i].time();
         }
     }
-
     stroke(200);
     for (let i = 0; i < 2; i++) { ////////////////////////////new tree
         push();
@@ -170,7 +162,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_3 && pieceX < x_3+lengthSize && pieceY > y_3 && pieceY < y_3+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -178,7 +169,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_4 && pieceX < x_4+lengthSize && pieceY > y_4 && pieceY < y_4+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -186,7 +176,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_5 && pieceX < x_5+lengthSize && pieceY > y_5 && pieceY < y_5+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -194,7 +183,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_6 && pieceX < x_6+lengthSize && pieceY > y_6 && pieceY < y_6+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -202,7 +190,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_7 && pieceX < x_7+lengthSize && pieceY > y_7 && pieceY < y_7+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -210,7 +197,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_8 && pieceX < x_8+lengthSize && pieceY > y_8 && pieceY < y_8+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -218,7 +204,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_9 && pieceX < x_9+lengthSize && pieceY > y_9 && pieceY < y_9+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -226,7 +211,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_10 && pieceX < x_10+lengthSize && pieceY > y_10 && pieceY < y_10+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -234,7 +218,6 @@ function draw() {
             noStroke();
             fill(25);
         } else if((pieceX > x_11 && pieceX < x_11+lengthSize && pieceY > y_11 && pieceY < y_11+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -242,7 +225,6 @@ function draw() {
             noStroke();
             fill(25);
         }else if((pieceX > x_12 && pieceX < x_12+lengthSize && pieceY > y_12 && pieceY < y_12+lengthSize)){
-        
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -250,8 +232,6 @@ function draw() {
             noStroke();
             fill(25);
         }else if((pieceX > x_13 && pieceX < x_13+lengthSize && pieceY > y_13 && pieceY < y_13+lengthSize && resetButton > 0)){
-        
-           console.log("resetSketch");
            resetSketch();
            resetButtton = 0;
         }
@@ -277,7 +257,6 @@ function draw() {
         change[sceneNumber - 1] = true; // seeeeee
     } 
      if ((pieceX > x2 && pieceX< x2+lengthSize && pieceY > y2 && pieceY < y2+lengthSize) && screenTotal && screenTotal2) { ////////////// father1-------2/////////
-        console.log('scene 2');
         currentTime = millis();
         screenTotal = !screenTotal;
         sceneNumber = 2;
@@ -480,7 +459,6 @@ function draw() {
         videoPlay(sceneNumber, 14);
     }
 
-
     if (!screenTotal2) { ///////////////////////comeback to main background(more smoooth)
         if (Transparency >= 0) {
             Transparency = Transparency - 10;
@@ -496,13 +474,11 @@ function draw() {
 }
 
 function mousePressed() {
-  
     let fs = fullscreen();
     fullscreen(!fs);
 }
 
 function circleHit() {
-    
     background(random(255), random(255), random(255));
     fill(0);
     ellipse(circleX, circleY, 50, 50);
@@ -511,13 +487,11 @@ function circleHit() {
         // 1st quadrant (adjust 200 and 250 as needed)
         //      fill(255, 0 0);
         //      ellipse(circleX, circleY, 200, 200);
-
     }
 
 }
 
 function resetSketch() {
-
     screenTotal = true;
     screenTotal2 = true;
     resetButton = 0;
@@ -525,49 +499,36 @@ function resetSketch() {
     for (let i = 0; i < 30; i++) { 
         hall[i] = new Hall();
     }
-
     let x1 = 175;
-
     for (let i = 0; i < 14; i++) { 
         letter_mother[i] = new Letter_mother(mother.charAt(i), x1 + width / 4, height / 4); //parallel translation
         x1 += textWidth(mother.charAt(i));
     }
-
     let x2 = 185;
-
     for (let i = 0; i < 14; i++) {
         letter_father[i] = new Letter_father(father.charAt(i), x2 + width / 4, height / 4); //parallel translation
         x2 += textWidth(father.charAt(i));
     }
-
     let x3 = 220;
-
     for (let i = 0; i < 12; i++) { 
         letter_aunt[i] = new Letter_aunt(aunt.charAt(i), x3 + width / 4, height / 4); //parallel translation
         x3 += textWidth(aunt.charAt(i));
     }
-
     let x4 = 200;
-
     for (let i = 0; i < 14; i++) { 
         letter_sister[i] = new Letter_sister(sister.charAt(i), x4 + width / 4, height / 4); //parallel translation
         x4 += textWidth(sister.charAt(i));
     }
-
     let x5 = 200;
-
     for (let i = 0; i < 15; i++) {
         letter_brother[i] = new Letter_brother(brother.charAt(i), x5 + width / 4, height / 4); //parallel translation
         x5 += textWidth(brother.charAt(i));
     }
-
     for (let i = 0; i < 15; i++) {
         change[i] = true;
     }
-
     tree[0] = new Tree(width / 2, 0.5, 0.87);
     tree[1] = new Tree(width / 2, 0.87, 0.5);
-
     for (let i = 0; i < 15; i++) { ////////////////////////////////// many videos
         videos[i] = createVideo("video" + i + ".mp4");
         videos[i].hide();
@@ -583,7 +544,6 @@ function videoPlay(tempScene, tempVideo) {
     let videoNumber = tempVideo;
     
     if (sceneNumber == tempScene && !screenTotal) { ///////////////sceneNumber1 flowchart
-
         passedTime = millis() - currentTime;
 
         if (sceneNumber == 1 || sceneNumber == 6 || sceneNumber == 11) {
@@ -657,10 +617,7 @@ function videoPlay(tempScene, tempVideo) {
     }
 }
 
-
-
 class Dandelion_full {
-
 
     constructor() {
         this.xtime = random(width);
@@ -1065,7 +1022,6 @@ class Letter_brother {
         }
     }
 }
-
 
 class Tree {
 
