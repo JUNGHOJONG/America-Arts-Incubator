@@ -1,8 +1,3 @@
-let hall = [];
-
-//let texts= "I LOVE YOUt";//"Click mouse to shake it up"
-//let letter= [];
-
 let mother = "mother's story";
 let letter_mother = [];
 
@@ -19,27 +14,17 @@ let brother = "brother's story";
 let letter_brother = [];
 
 let change = [];
-
-
-//let change= true;
-
 let tree = [];
+let videos = [];
+let hall = [];
 
 let Transparency = 0;
 let screenOnoff = true;
-
 let sceneNumber = 0;
-//let screenTotal = true;
-//let screenTotal2 = true;
-
 let screenTotal;
 let screenTotal2;
-
-
 let currentTime = 0;
 let passedTime = 0;
-
-let videos = [];
 
 let x1= 162;
 let y1= 404;
@@ -69,25 +54,25 @@ let x13= 245;
 let y13= 52;
 let x14= 316;
 let y14= 56;
-let x15= 395;//384
-let y15= 47;//57
+let x15= 395;
+let y15= 47;
 
 let x_1= 242;
 let y_1= 404;
 let x_2= 383;
 let y_2= 404;
 let x_3= 454;
-let y_3= 404;///////
+let y_3= 404;
 let x_4= 95;
-let y_4= 320;/////
+let y_4= 320;
 let x_5= 156;
-let y_5= 339;///
+let y_5= 339;
 let x_6= 395;
 let y_6= 340;
 let x_7= 97;
 let y_7= 180;
 let x_8= 280;
-let y_8= 220;///
+let y_8= 220;
 let x_9= 163;
 let y_9= 100;
 let x_10= 398;
@@ -101,55 +86,20 @@ let y_13= 45;
 let x_14= 93;
 let y_14= 400;
 
-
-//let x1, y1= {162, 404};
-//let x2, y2= {x2: 306, y2: 404};
-//let x3, y3= {x3: 448, y3: 333};
-//let x4, y4= {x4: 89, y4: 253};
-//let x5, y5= {x5: 210, y5: 282};
-//let x6, y6= {x6: 329, y6: 286};
-//let x7, y7= {x7: 448, y7: 264};
-//let x8, y8= {x8: 95, y8: 113};
-//let x9, y9= {x9: 216, y9: 168};
-//let x10, y10= {x10: 334, y10: 179};
-//let x11, y11= {x11: 448, y11: 193};
-//let x12, y12= {x12: 174, y12: 48};
-//let x13, y13= {x13: 245, y13: 52};
-//let x14, y14= {x14: 316, y14: 56};
-//let x15, y15= {x15: 384, y15: 57};
-
 let lengthSize= 60;
-//let heightSize= 60;
-
-//var song;
-
-////function preload() {
- //song = loadSound('assets/iloveyoutmaintheme.mp3', loaded);
-//}
-
 let resetButton;///////////watch!!!!!!!
 
 function setup() {
-//    startTracking();
-    createCanvas(windowWidth, windowWidth/8);//windowHeight
-    //song = loadSound("iloveyoutmaintheme.mp3");
-    startTracking(); 
 
+    createCanvas(windowWidth, windowWidth/8);//windowHeight
+    startTracking(); 
     textFont("Bradley Hand");
     textSize(100); //40
-
     resetSketch();
 }
 
-
-
 function draw() {
 
-    //song.play();
-    // console.log(pieceX, pieceY, mouseX, mouseY);
-    //console.log(x1, y1);
-    //print(mouseX, mouseY);
-    //windowResized();
     background(0);
 
     for (let i = 0; i < 30; i++) {
@@ -158,19 +108,15 @@ function draw() {
     }
 
     for (let i = 0; i < 14; i++) {
-
         letter_mother[i].display();
-
         if (change[0] && change[5] && change[10]) {
             letter_mother[i].shake();
-            letter_mother[i].time(); // chage false == tue;
+            letter_mother[i].time(); 
         }
     }
 
     for (let i = 0; i < 14; i++) {
-
         letter_father[i].display();
-
         if (change[1] && change[6] && change[11]) {
             letter_father[i].shake();
             letter_father[i].time();
@@ -178,9 +124,7 @@ function draw() {
     }
 
     for (let i = 0; i < 12; i++) {
-
         letter_aunt[i].display();
-
         if (change[2] && change[7] && change[12]) {
             letter_aunt[i].shake();
             letter_aunt[i].time();
@@ -188,9 +132,7 @@ function draw() {
     }
 
     for (let i = 0; i < 14; i++) {
-
         letter_sister[i].display();
-
         if (change[3] && change[8] && change[13]) {
             letter_sister[i].shake();
             letter_sister[i].time();
@@ -198,9 +140,7 @@ function draw() {
     }
 
     for (let i = 0; i < 15; i++) {
-
         letter_brother[i].display();
-
         if (change[4] && change[9] && change[14]) {
             letter_brother[i].shake();
             letter_brother[i].time();
@@ -211,16 +151,11 @@ function draw() {
     for (let i = 0; i < 2; i++) { ////////////////////////////new tree
         push();
         tree[i].translates(i);
-        tree[i].branch(120); //70//100
+        tree[i].branch(120); 
         pop();
     }
-//console.log(circleX, circleY, width / 3, screenTotal, screenTotal2, sceneNumber);
-//circleX> 204 && circleX<234 && circleY>187 && circleY< 217
-    
-    
-    
-    
-    if((pieceX > x_1 && pieceX < x_1+lengthSize && pieceY > y_1 && pieceY < y_1+lengthSize)){//////////////
+ 
+    if((pieceX > x_1 && pieceX < x_1+lengthSize && pieceY > y_1 && pieceY < y_1+lengthSize)){
             fill(200);
             stroke(100);
             resetButton = 1;
@@ -320,9 +255,7 @@ function draw() {
            resetSketch();
            resetButtton = 0;
         }
-    
     else if((pieceX > x_14 && pieceX < x_14+lengthSize && pieceY > y_14 && pieceY < y_14+lengthSize)){////////////////////reset
-        
            fill(200);
            stroke(100);
            resetButton = 1;
@@ -331,37 +264,18 @@ function draw() {
            fill(25);
         }
     
-    
-    
-    
-    
-    
-    
-    
-    
     if ((pieceX > x1 && pieceX< x1+lengthSize && pieceY > y1 && pieceY < y1+lengthSize) && screenTotal && screenTotal2) { ////////////// mother1-----1/////////////
-//        console.log('scene 1');
         currentTime = millis();
         screenTotal = !screenTotal;
         sceneNumber = 1;
-        change[sceneNumber - 1] = !change[sceneNumber - 1]; //sceneNumber - 1 == change number 
-        //console.log("eeeeeeeeeee" + change[sceneNumber - 1]);
-        //change[0]=!change[0];
-        //console.log("eeeeeeeeeee" + " " +change[sceneNumber - 1]);//////////////////// must see!!!!!!!!!!!!!!!!!!!!!!
-        //circleX<204 || circleX>234 || circleY<187 || circleY>217
-        
-        
+        change[sceneNumber - 1] = !change[sceneNumber - 1]; 
         resetButton++;
-        //console.log("resetButton = " + resetButton);
-        //console.log(circleX, circleY, width / 3, screenTotal, screenTotal2, sceneNumber);
-    } else if ((pieceX< x1 || pieceX > (x1+lengthSize) || pieceY < y1 || pieceY > (y1 + lengthSize)) && sceneNumber == 1) {////////////////////////////////////// reset code(this is )
-        
+    } else if ((pieceX< x1 || pieceX > (x1+lengthSize) || pieceY < y1 || pieceY > (y1 + lengthSize)) && sceneNumber == 1) {///////////////////////// reset code(this is )
         videos[0].pause();
         screenTotal = true;
         screenTotal2 = true;
         change[sceneNumber - 1] = true; // seeeeee
     } 
-
      if ((pieceX > x2 && pieceX< x2+lengthSize && pieceY > y2 && pieceY < y2+lengthSize) && screenTotal && screenTotal2) { ////////////// father1-------2/////////
         console.log('scene 2');
         currentTime = millis();
@@ -375,9 +289,7 @@ function draw() {
         screenTotal2 = true;
         change[sceneNumber - 1] = true;
     }
-
      if ((pieceX > x3 && pieceX< x3+lengthSize && pieceY > y3 && pieceY < y3+lengthSize) && screenTotal && screenTotal2) { ////////////// aunt1///////
-//        console.log('scene 3');
         currentTime = millis();
         screenTotal = !screenTotal;
         sceneNumber = 3;
@@ -390,7 +302,6 @@ function draw() {
         change[sceneNumber - 1] = true;
     }
 
-   // console.log(circleX, circleY, width / 3, screenTotal, screenTotal2, sceneNumber);
      if((pieceX > x4 && pieceX< x4+lengthSize && pieceY > y4 && pieceY < y4+lengthSize) && screenTotal && screenTotal2){////////////// sister1////////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -403,7 +314,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
      if((pieceX > x5 && pieceX< x5+lengthSize && pieceY > y5 && pieceY < y5+lengthSize) && screenTotal && screenTotal2){////////////// brother1////////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -416,7 +326,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
      if((pieceX > x6 && pieceX < x6+lengthSize && pieceY > y6 && pieceY < y6+lengthSize) && screenTotal && screenTotal2){////////////// mother2//////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -429,7 +338,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;// seeeeee
         }
-        
      if((pieceX > x7 && pieceX < x7+lengthSize && pieceY > y7 && pieceY < y7+lengthSize) && screenTotal && screenTotal2){////////////// father2////////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -442,7 +350,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
       if((pieceX > x8 && pieceX < x8+lengthSize && pieceY > y8 && pieceY < y8+lengthSize) && screenTotal && screenTotal2){////////////// aunt2////////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -455,7 +362,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
        if((pieceX > x9 && pieceX < x9+lengthSize && pieceY > y9 && pieceY < y9+lengthSize) && screenTotal && screenTotal2){////////////// sister2/////////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -468,7 +374,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
         if((pieceX > x10 && pieceX < x10+lengthSize && pieceY > y10 && pieceY < y10+lengthSize) && screenTotal && screenTotal2){////////////// brother2/////////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -481,7 +386,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
         if((pieceX > x11 && pieceX < x11+lengthSize && pieceY > y11 && pieceY < y11+lengthSize) && screenTotal && screenTotal2){////////////// mother3//////////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -494,7 +398,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;// seeeeee
         }
-        
        if((pieceX > x12 && pieceX < x12+lengthSize && pieceY > y12 && pieceY < y12+lengthSize) && screenTotal && screenTotal2){////////////// father3////////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -507,7 +410,6 @@ function draw() {
            screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
         if((pieceX > x13 && pieceX < x13+lengthSize && pieceY > y13 && pieceY < y13+lengthSize) && screenTotal && screenTotal2){////////////// aunt3///////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -520,7 +422,6 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
        if((pieceX > x14 && pieceX < x14+lengthSize && pieceY > y14 && pieceY < y14+lengthSize) && screenTotal && screenTotal2){////////////// sister3///////
             currentTime = millis();
             screenTotal=!screenTotal;
@@ -533,14 +434,12 @@ function draw() {
             screenTotal2= true;
             change[sceneNumber - 1]= true;
         }
-        
         if((pieceX > x15 && pieceX < x15+lengthSize && pieceY > y15 && pieceY < y15+lengthSize) && screenTotal && screenTotal2){////////////// brother3/////
             currentTime = millis();
             screenTotal=!screenTotal;
             sceneNumber = 15;
             change[sceneNumber - 1]=!change[sceneNumber - 1];
             resetButton++;
-            console.log("resetButton = " + resetButton);
         } else if((pieceX < x15 || pieceX > x15+lengthSize || pieceY < y15 || pieceY > y15+lengthSize) && sceneNumber == 15){
             videos[14].pause();
             screenTotal= true;
@@ -548,128 +447,12 @@ function draw() {
             change[sceneNumber - 1]= true;
         }
     
-//        if((pieceX > x_1 && pieceX < x_1+lengthSize && pieceY > y_1 && pieceY < y_1+lengthSize)){//////////////
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_2 && pieceX < x_2+lengthSize && pieceY > y_2 && pieceY < y_2+lengthSize)){
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_3 && pieceX < x_3+lengthSize && pieceY > y_3 && pieceY < y_3+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_4 && pieceX < x_4+lengthSize && pieceY > y_4 && pieceY < y_4+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_5 && pieceX < x_5+lengthSize && pieceY > y_5 && pieceY < y_5+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_6 && pieceX < x_6+lengthSize && pieceY > y_6 && pieceY < y_6+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_7 && pieceX < x_7+lengthSize && pieceY > y_7 && pieceY < y_7+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_8 && pieceX < x_8+lengthSize && pieceY > y_8 && pieceY < y_8+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_9 && pieceX < x_9+lengthSize && pieceY > y_9 && pieceY < y_9+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_10 && pieceX < x_10+lengthSize && pieceY > y_10 && pieceY < y_10+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        } else if((pieceX > x_11 && pieceX < x_11+lengthSize && pieceY > y_11 && pieceY < y_11+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        }else if((pieceX > x_12 && pieceX < x_12+lengthSize && pieceY > y_12 && pieceY < y_12+lengthSize)){
-//        
-//            fill(200);
-//            stroke(100);
-//            resetButton = 1;
-//            text("Try again", 300 + width / 4, height / 4);
-//            noStroke();
-//            fill(25);
-//        }else if((pieceX > x_13 && pieceX < x_13+lengthSize && pieceY > y_13 && pieceY < y_13+lengthSize && resetButton>0)){
-//        
-//           console.log("resetSketch");
-//           resetSketch();
-//           resetButtton = 0;
-//        }
-//    
-//    else if((pieceX > x_14 && pieceX < x_14+lengthSize && pieceY > y_14 && pieceY < y_14+lengthSize)){////////////////////reset
-//        
-//           fill(200);
-//           stroke(100);
-//           resetButton = 1;
-//           text("Try again", 100 + width / 4, height / 4);
-//           noStroke();
-//           fill(25);
-//        }
-    
-    
-     
 
     if (sceneNumber == 1) {
-        console.log('scene 1');
         videoPlay(sceneNumber, 0);
     } else if (sceneNumber == 2) {
-        //console.log('scene 2');
         videoPlay(sceneNumber, 1);
     } else if (sceneNumber == 3) {
-      //  console.log('scene 3');
         videoPlay(sceneNumber, 2);
     } else if (sceneNumber == 4) {
         videoPlay(sceneNumber, 3);
@@ -699,52 +482,27 @@ function draw() {
 
 
     if (!screenTotal2) { ///////////////////////comeback to main background(more smoooth)
-
         if (Transparency >= 0) {
-
             Transparency = Transparency - 10;
             fill(0, Transparency);
             noStroke();
             rect(0, 0, width, height);
         }
     }
-    //windowResized();
-    //    if(circleX < 200 && circleY < 250){
-    //    circleHit();
-    //}
-    
     noFill();
     stroke(0);
     strokeWeight(2);
     rect(0, 0, width, height);
-    
-    // for testing pieceX, pieceY
-    //fill(255, 0, 0);/////////////////////////////////I find it
-    //ellipse(pieceX, pieceY, 50, 50);
 }
 
 function mousePressed() {
-
-//    if (mouseButton == LEFT) {
-//        resetSketch();
-//    } else if (mouseButton == RIGHT) {
-//        let fs = fullscreen();
-//        fullscreen(!fs);
-//    }
-    
+  
     let fs = fullscreen();
     fullscreen(!fs);
-    //if (song.isPlaying()) {
-    // .isPlaying() returns a boolean
-    //song.stop();
-    
- // } else {
-   // song.play();
-    
-//}
 }
 
 function circleHit() {
+    
     background(random(255), random(255), random(255));
     fill(0);
     ellipse(circleX, circleY, 50, 50);
@@ -760,47 +518,45 @@ function circleHit() {
 
 function resetSketch() {
 
-    //startTracking();
     screenTotal = true;
     screenTotal2 = true;
     resetButton = 0;
     
-    for (let i = 0; i < 30; i++) { //30
+    for (let i = 0; i < 30; i++) { 
         hall[i] = new Hall();
     }
 
+    let x1 = 175;
 
-    let x1 = 175;//correct
-
-    for (let i = 0; i < 14; i++) { //14
+    for (let i = 0; i < 14; i++) { 
         letter_mother[i] = new Letter_mother(mother.charAt(i), x1 + width / 4, height / 4); //parallel translation
         x1 += textWidth(mother.charAt(i));
     }
 
-    let x2 = 185;//correct
+    let x2 = 185;
 
-    for (let i = 0; i < 14; i++) { //14
+    for (let i = 0; i < 14; i++) {
         letter_father[i] = new Letter_father(father.charAt(i), x2 + width / 4, height / 4); //parallel translation
         x2 += textWidth(father.charAt(i));
     }
 
-    let x3 = 220;//20------>correct
+    let x3 = 220;
 
-    for (let i = 0; i < 12; i++) { //12
+    for (let i = 0; i < 12; i++) { 
         letter_aunt[i] = new Letter_aunt(aunt.charAt(i), x3 + width / 4, height / 4); //parallel translation
         x3 += textWidth(aunt.charAt(i));
     }
 
-    let x4 = 200;//correct
+    let x4 = 200;
 
-    for (let i = 0; i < 14; i++) { //14
+    for (let i = 0; i < 14; i++) { 
         letter_sister[i] = new Letter_sister(sister.charAt(i), x4 + width / 4, height / 4); //parallel translation
         x4 += textWidth(sister.charAt(i));
     }
 
-    let x5 = 200;//correct
+    let x5 = 200;
 
-    for (let i = 0; i < 15; i++) { //10
+    for (let i = 0; i < 15; i++) {
         letter_brother[i] = new Letter_brother(brother.charAt(i), x5 + width / 4, height / 4); //parallel translation
         x5 += textWidth(brother.charAt(i));
     }
@@ -809,128 +565,91 @@ function resetSketch() {
         change[i] = true;
     }
 
-
     tree[0] = new Tree(width / 2, 0.5, 0.87);
     tree[1] = new Tree(width / 2, 0.87, 0.5);
 
-
     for (let i = 0; i < 15; i++) { ////////////////////////////////// many videos
         videos[i] = createVideo("video" + i + ".mp4");
-        //        videos[i].stop();
         videos[i].hide();
     }
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    //    resizeCanvas(width, height);
 }
 
 function videoPlay(tempScene, tempVideo) {
-console.log("check", screenTotal);
-    //let sceneNumber= tempScene;
-    let videoNumber = tempVideo;
 
+    let videoNumber = tempVideo;
+    
     if (sceneNumber == tempScene && !screenTotal) { ///////////////sceneNumber1 flowchart
-console.log("check2");
+
         passedTime = millis() - currentTime;
 
         if (sceneNumber == 1 || sceneNumber == 6 || sceneNumber == 11) {
-
             for (let i = 0; i < 14; i++) {
-//console.log("meeeeeeelong");  tempScene
                 if (!change[sceneNumber - 1]) {
-                    letter_mother[i].relocate();
-                    console.log("sceneNumber1");
+                    letter_mother[i].relocate();  
                 }
             }
         } else if (sceneNumber == 2 || sceneNumber == 7 || sceneNumber == 12) {
-
             for (let i = 0; i < 14; i++) {
-
                 if (!change[sceneNumber - 1]) {
                     letter_father[i].relocate();
-                    console.log("sceneNumber2");
                 }
             }
         } else if (sceneNumber == 3 || sceneNumber == 8 || sceneNumber == 13) {
-
             for (let i = 0; i < 12; i++) {
-
                 if (!change[sceneNumber - 1]) {
                     letter_aunt[i].relocate();
-                    console.log("sceneNumber3");
                 }
             }
         } else if (sceneNumber == 4 || sceneNumber == 9 || sceneNumber == 14) {
-
             for (let i = 0; i < 14; i++) {
-
                 if (!change[sceneNumber - 1]) {
                     letter_sister[i].relocate();
-                    console.log("sceneNumber4");
                 }
             }
         } else if (sceneNumber == 5 || sceneNumber == 10 || sceneNumber == 15) {
-
             for (let i = 0; i < 15; i++) {
-
                 if (!change[sceneNumber - 1]) {
                     letter_brother[i].relocate();
-                    console.log("sceneNumber5");
                 }
             }
         }
 
-
-
         if (passedTime > 3000) {
-
             if (screenOnoff) {
                 noStroke();
                 fill(0, Transparency);
                 Transparency = Transparency + 3;
                 noStroke();
                 rect(0, 0, width, height);
-
                 if (Transparency > 240) {
                     Transparency = 0;
                     screenOnoff = !screenOnoff;
                 }
-
             } else if (!screenOnoff) {
-
                 fill(0);
                 rect(0, 0, width, height);
-
-
                 videos[videoNumber].play();
-
-
                 tint(255, Transparency);
                 image(videos[videoNumber], 0, 0, width, height);
 
-
                 if (videos[videoNumber].time() < 2) {
-
                     if (Transparency < 245) {
                         Transparency = Transparency + 20;
                     }
-
                 } else if ((videos[videoNumber].time() > videos[videoNumber].duration() - 2) && (videos[videoNumber].time() < videos[videoNumber].duration() - 0.5)) {
-
                     if (Transparency > 0) {
                         Transparency = Transparency - 20;
                     }
-
                 } else if (videos[videoNumber].duration() - 0.5 < videos[videoNumber].time()) {
 
                     screenOnoff = true; //////// initial
-                    //sceneNumber = 0;
                     Transparency = 250;
                     screenTotal = true;
                     screenTotal2 = false;
-                    //change[tempScene - 1] = true;
                     change[sceneNumber - 1] = true;/////////recheck
                 }
             }
@@ -944,7 +663,6 @@ class Dandelion_full {
 
 
     constructor() {
-
         this.xtime = random(width);
         this.ytime = random(height);
         this.xRandom = random(width);
@@ -958,7 +676,6 @@ class Dandelion_full {
     }
 
     display() {
-
         let len = noise(this.xtime) * (width / 5); ///////////length of hall(width/10)-original width/13
 
         let x = (sin(this.xtime) * 10) + this.xRandom; //////////// x of center
@@ -966,7 +683,6 @@ class Dandelion_full {
 
         noFill();
         strokeWeight(1.5);
-
         beginShape(); ////////////////// stem
         curveVertex(this.rootx, this.rooty - 1);
         curveVertex(this.rootx, this.rooty);
@@ -974,52 +690,35 @@ class Dandelion_full {
         curveVertex(x, y);
         curveVertex(x, y + 1);
         endShape();
-
-        // beginShape();
-        // curveVertex(this.rootx, this.rooty-1);
-        // curveVertex(this.rootx, this.rooty);
-        // curveVertex(this.rootx, this.rooty-1);
-        // curveVertex(this.rootx, this.rooty);
-        // endShape();
-
         push();
         translate(x, y);
 
         for (let i = 0; i < this.spectrum; i += 0.1) {
-
             push();
             rotate(this.theta + i);
-
             noStroke();
 
             for (let i2 = 2; i2 >= 0; i2--) { /////////// shape of center
-
                 fill(255 - 80 * i2, 100);
                 ellipse(0, 0, len / 4 * (i2 + 1) / 3, len / 8 * (i2 + 1) / 3);
             }
-
             stroke(this.c);
             strokeWeight(0.3);
             line(0, 0, len, 0);
             translate(len, 0);
 
             for (let j = 0; j < TWO_PI; j += 0.5) {
-
                 push();
-
                 rotate(-this.theta - j);
                 line(0, 0, len / 4, 0);
                 pop();
             }
-
-
             pop();
         }
         pop();
     }
 
     update() {
-
         this.xtime += this.increment;
         this.ytime += this.increment;
         this.theta += this.speed;
@@ -1029,7 +728,6 @@ class Dandelion_full {
 class Hall {
 
     constructor() {
-
         this.xtime = random(width);
         this.ytime = random(height);
         this.increment = random(0.005, 0.01); // moving fast
@@ -1040,27 +738,21 @@ class Hall {
     }
 
     display() {
-
         let len = noise(this.xtime) * (width / 15); //width/13
 
         let x = noise(this.xtime) * width;
         let y = noise(this.ytime) * height + 100; //parallel translation
-        /*
-        x= constrain(x, (width/4)*1, (width/4)*3);
-         y= constrain(y, (height/4)*1, (height/4)*3);
-         */
+   
         push();
         translate(x, y);
-
         noStroke();
+        
         for (let i = 2; i >= 0; i--) { /////////// shape of center
-
             fill(255 - 80 * i, 100);
             ellipse(0, 0, len / 4 * (i + 1) / 3, len / 4 * (i + 1) / 3);
         }
 
         for (let i = 0; i < this.spectrum; i += 0.1) {
-
             push();
             rotate(this.theta + i);
             stroke(this.c);
@@ -1069,9 +761,7 @@ class Hall {
             translate(len, 0);
 
             for (let j = 0; j < TWO_PI; j += 0.5) {
-
                 push();
-
                 rotate(-this.theta - j);
                 line(0, 0, len / 4, 0);
                 pop();
@@ -1083,7 +773,6 @@ class Hall {
     }
 
     update() {
-
         this.xtime += this.increment;
         this.ytime += this.increment;
         this.theta += this.speed;
@@ -1093,7 +782,6 @@ class Hall {
 class Letter_mother {
 
     constructor(character, Xpos, Ypos) {
-
         this.cha = character;
         this.currentX = this.homeX = Xpos;
         this.currentY = this.homeY = Ypos;
@@ -1102,84 +790,45 @@ class Letter_mother {
         this.yTime = random(1);
         this.increment = random(0.01, 0.015); //random(0.005, 0.01);
     }
+    
     display() {
-
         textAlign(LEFT);
-            //stroke(100);
-   //     if (!change[0]) {
-   //         fill(200);
-   //         stroke(100);
-   //     } else {
-   //         stroke(100);
-   //         noStroke();
-   //         fill(this.rainbow);
-   //     }
-        
-//        if (sceneNumber == 1 || sceneNumber == 6 || sceneNumber == 11) {
-//
-//                if (!change[sceneNumber - 1]) {
-//                    fill(200);
-//                    stroke(100);
-//                    //letter_mother[i].relocate();
-//                    console.log("meeeeeeelong"); 
-//                } else {
-//                    
-//                    stroke(100);
-//                    noStroke();
-//                    fill(this.rainbow);
-//                }
-//        }
         
         if ((sceneNumber == 1 || sceneNumber == 6 || sceneNumber == 11) && !change[sceneNumber - 1]) {       
             fill(200);
             stroke(100);
-            //letter_mother[i].relocate();
-            console.log("meeeeeeelong");
         }else {
             stroke(100);
             noStroke();
             fill(this.rainbow);
         }
-        
-        //    fill(this.rainbow);
         text(this.cha, this.currentX, this.currentY);
     }
+    
     shake() {
-
-        //currentY+=random(-10, 10);
-        //currentX+=random(-10, 10);
-
         this.currentX = noise(this.xTime) * width;
         this.currentY = noise(this.yTime) * height + 150; //parallel translation----> +200
     }
 
     time() {
-
         this.xTime += this.increment;
         this.yTime += this.increment;
     }
+    
     relocate() {
-
         let distance = dist(this.currentX, this.currentY, this.homeX, this.homeY);
-
         let speed = map(distance, 50, 0, 10, 0);
 
-        //currentY=homeY;
         if (this.currentY != this.homeY && this.currentY > this.homeY) {
-
             this.currentY -= speed;
         } else if (this.currentY != this.homeY && this.currentY < this.homeY) {
-
             this.currentY += speed;
         } else {
             this.currentY = this.homeY;
         }
-
         if (this.currentX != this.homeX && this.currentX > this.homeX) {
-
             this.currentX -= speed;
         } else if (this.currentX != this.homeX && this.currentX < this.homeX) {
-
             this.currentX += speed;
         } else {
             this.currentX = this.homeX;
@@ -1190,7 +839,6 @@ class Letter_mother {
 class Letter_father {
 
     constructor(character, Xpos, Ypos) {
-
         this.cha = character;
         this.currentX = this.homeX = Xpos;
         this.currentY = this.homeY = Ypos;
@@ -1199,83 +847,45 @@ class Letter_father {
         this.yTime = random(1);
         this.increment = random(0.01, 0.015);
     }
+    
     display() {
-
         textAlign(LEFT);
-    //    if (!change[1]) {
-    //        fill(200);
-    //        stroke(100);
-    //    } else {
-     //       stroke(100);
-     //       noStroke();
-     //       fill(this.rainbow);
-     //   }
-        
-        
-//        if (sceneNumber == 2 || sceneNumber == 7 || sceneNumber == 12) {
-//
-//                if (!change[sceneNumber - 1]) {
-//                    fill(200);
-//                    stroke(100);
-//                    //letter_mother[i].relocate();
-//                    console.log("meeeeeeelong");      
-//                } else {
-//                    
-//                    stroke(100);
-//                    noStroke();
-//                    fill(this.rainbow);
-//                }
-//        }
         
         if ((sceneNumber == 2 || sceneNumber == 7 || sceneNumber == 12) && !change[sceneNumber - 1]) {       
             fill(200);
             stroke(100);
-            //letter_mother[i].relocate();
-            console.log("meeeeeeelong");
         }else {
             stroke(100);
             noStroke();
             fill(this.rainbow);
         }
-        
         text(this.cha, this.currentX, this.currentY);
     }
+    
     shake() {
-
-        //currentY+=random(-10, 10);
-        //currentX+=random(-10, 10);
-
         this.currentX = noise(this.xTime) * width;
         this.currentY = noise(this.yTime) * height + 150; //parallel translation
     }
 
     time() {
-
         this.xTime += this.increment;
         this.yTime += this.increment;
     }
+    
     relocate() {
-
         let distance = dist(this.currentX, this.currentY, this.homeX, this.homeY);
-
         let speed = map(distance, 50, 0, 10, 0);
 
-        //currentY=homeY;
         if (this.currentY != this.homeY && this.currentY > this.homeY) {
-
             this.currentY -= speed;
         } else if (this.currentY != this.homeY && this.currentY < this.homeY) {
-
             this.currentY += speed;
         } else {
             this.currentY = this.homeY;
         }
-
         if (this.currentX != this.homeX && this.currentX > this.homeX) {
-
             this.currentX -= speed;
         } else if (this.currentX != this.homeX && this.currentX < this.homeX) {
-
             this.currentX += speed;
         } else {
             this.currentX = this.homeX;
@@ -1286,7 +896,6 @@ class Letter_father {
 class Letter_aunt {
 
     constructor(character, Xpos, Ypos) {
-
         this.cha = character;
         this.currentX = this.homeX = Xpos;
         this.currentY = this.homeY = Ypos;
@@ -1295,83 +904,45 @@ class Letter_aunt {
         this.yTime = random(1);
         this.increment = random(0.01, 0.015);
     }
+    
     display() {
-
         textAlign(LEFT);
         
-        
-        //stroke(100);
-        //noStroke();
-        //fill(this.rainbow);
-        
-//        if (sceneNumber == 3 || sceneNumber == 8 || sceneNumber == 13) {
-//
-//                if (!change[sceneNumber - 1]) {
-//                    
-//                    fill(200);
-//                    stroke(100);
-//                    //letter_mother[i].relocate();
-//                    console.log("meeeeeeelong"); 
-//                } else {
-//                    
-//                    stroke(100);
-//                    noStroke();
-//                    fill(this.rainbow);
-//                }
-//        }
-        // console.log(!change[sceneNumber - 1]);
         if ((sceneNumber == 3 || sceneNumber == 8 || sceneNumber == 13) && !change[sceneNumber - 1]) {       
             fill(200);
             stroke(100);
-            //letter_mother[i].relocate();
-            //console.log("meeeeeeelong");
         }else {
             stroke(100);
             noStroke();
             fill(this.rainbow);
         }
-        
-        
-        
-        
         text(this.cha, this.currentX, this.currentY);
     }
+    
     shake() {
-
-        //currentY+=random(-10, 10);
-        //currentX+=random(-10, 10);
-
         this.currentX = noise(this.xTime) * width;
         this.currentY = noise(this.yTime) * height + 150; //parallel translation
     }
 
     time() {
-
         this.xTime += this.increment;
         this.yTime += this.increment;
     }
+    
     relocate() {
-
         let distance = dist(this.currentX, this.currentY, this.homeX, this.homeY);
-
         let speed = map(distance, 50, 0, 10, 0);
 
-        //currentY=homeY;
         if (this.currentY != this.homeY && this.currentY > this.homeY) {
-
             this.currentY -= speed;
         } else if (this.currentY != this.homeY && this.currentY < this.homeY) {
-
             this.currentY += speed;
         } else {
             this.currentY = this.homeY;
         }
-
         if (this.currentX != this.homeX && this.currentX > this.homeX) {
-
             this.currentX -= speed;
         } else if (this.currentX != this.homeX && this.currentX < this.homeX) {
-
             this.currentX += speed;
         } else {
             this.currentX = this.homeX;
@@ -1382,7 +953,6 @@ class Letter_aunt {
 class Letter_sister {
 
     constructor(character, Xpos, Ypos) {
-
         this.cha = character;
         this.currentX = this.homeX = Xpos;
         this.currentY = this.homeY = Ypos;
@@ -1391,67 +961,36 @@ class Letter_sister {
         this.yTime = random(1);
         this.increment = random(0.01, 0.015);
     }
+    
     display() {
-
         textAlign(LEFT);
-        //stroke(100);
-        //noStroke();
-        //fill(this.rainbow);
-        
-//        if (sceneNumber == 4 || sceneNumber == 9 || sceneNumber == 14) {
-//                if (!change[sceneNumber - 1]) {
-//                    
-//                    fill(200);
-//                    stroke(100);
-//                    //letter_mother[i].relocate();
-//                    console.log("meeeeeeelong");
-//                     
-//                } else {
-//                    
-//                    stroke(100);
-//                    noStroke();
-//                    fill(this.rainbow);
-//                }
-//        }
         
         if ((sceneNumber == 4 || sceneNumber == 9 || sceneNumber == 14) && !change[sceneNumber - 1]) {       
             fill(200);
             stroke(100);
-            //letter_mother[i].relocate();
-            console.log("meeeeeeelong");
         }else {
             stroke(100);
             noStroke();
             fill(this.rainbow);
         }
-        
-        
-        
         text(this.cha, this.currentX, this.currentY);
     }
+    
     shake() {
-
-        //currentY+=random(-10, 10);
-        //currentX+=random(-10, 10);
-
         this.currentX = noise(this.xTime) * width;
         this.currentY = noise(this.yTime) * height + 150; //parallel translation
     }
 
     time() {
-
         this.xTime += this.increment;
         this.yTime += this.increment;
     }
+    
     relocate() {
-
         let distance = dist(this.currentX, this.currentY, this.homeX, this.homeY);
-
         let speed = map(distance, 50, 0, 10, 0);
 
-        //currentY=homeY;
         if (this.currentY != this.homeY && this.currentY > this.homeY) {
-
             this.currentY -= speed;
         } else if (this.currentY != this.homeY && this.currentY < this.homeY) {
 
@@ -1461,10 +1000,8 @@ class Letter_sister {
         }
 
         if (this.currentX != this.homeX && this.currentX > this.homeX) {
-
             this.currentX -= speed;
         } else if (this.currentX != this.homeX && this.currentX < this.homeX) {
-
             this.currentX += speed;
         } else {
             this.currentX = this.homeX;
@@ -1475,7 +1012,6 @@ class Letter_sister {
 class Letter_brother {
 
     constructor(character, Xpos, Ypos) {
-
         this.cha = character;
         this.currentX = this.homeX = Xpos;
         this.currentY = this.homeY = Ypos;
@@ -1484,98 +1020,45 @@ class Letter_brother {
         this.yTime = random(1);
         this.increment = random(0.01, 0.015);
     }
+    
     display() {
-
         textAlign(LEFT);
-        //stroke(100);
-        //noStroke();
-        //fill(this.rainbow);
-        
-//        if (sceneNumber == 5 || sceneNumber == 10 || sceneNumber == 15) {
-//
-//            for (let i = 0; i < 14; i++) {
-////console.log("meeeeeeelong");
-//                if (!change[sceneNumber - 1]) {
-//                    
-//                    fill(200);
-//                    stroke(100);
-//                    //letter_mother[i].relocate();
-//                    console.log("meeeeeeelong");
-//                    
-//                    
-//                } else {
-//                    
-//                    stroke(100);
-//                    noStroke();
-//                    fill(this.rainbow);
-//                }
-//            }
-//        }
-        
-//        if (sceneNumber == 5 || sceneNumber == 10 || sceneNumber == 15) {
-//                if (!change[sceneNumber - 1]) {
-//                    fill(200);
-//                    stroke(100);
-//                    //letter_mother[i].relocate();
-//                    console.log("meeeeeeelong");
-//                } else {
-//                    stroke(100);
-//                    noStroke();
-//                    fill(this.rainbow);
-//                }
-//        }
-        
         if ((sceneNumber == 5 || sceneNumber == 10 || sceneNumber == 15) && !change[sceneNumber - 1]) {       
             fill(200);
             stroke(100);
-            //letter_mother[i].relocate();
-            console.log("meeeeeeelong");
         }else {
             stroke(100);
             noStroke();
             fill(this.rainbow);
         }
-        
-        
-        
         text(this.cha, this.currentX, this.currentY);
     }
+    
     shake() {
-
-        //currentY+=random(-10, 10);
-        //currentX+=random(-10, 10);
-
         this.currentX = noise(this.xTime) * width;
         this.currentY = noise(this.yTime) * height + 150; //parallel translation
     }
 
     time() {
-
         this.xTime += this.increment;
         this.yTime += this.increment;
     }
+    
     relocate() {
-
         let distance = dist(this.currentX, this.currentY, this.homeX, this.homeY);
-
         let speed = map(distance, 50, 0, 10, 0);
 
-        //currentY=homeY;
         if (this.currentY != this.homeY && this.currentY > this.homeY) {
-
             this.currentY -= speed;
         } else if (this.currentY != this.homeY && this.currentY < this.homeY) {
-
             this.currentY += speed;
         } else {
             this.currentY = this.homeY;
         }
 
         if (this.currentX != this.homeX && this.currentX > this.homeX) {
-
             this.currentX -= speed;
         } else if (this.currentX != this.homeX && this.currentX < this.homeX) {
-
             this.currentX += speed;
         } else {
             this.currentX = this.homeX;
@@ -1587,16 +1070,11 @@ class Letter_brother {
 class Tree {
 
     constructor(position, leftLength, rightLength) {
-
         this.angle = PI / 6;
-        //    this.x1= random(width/4, width/2);
-        //    this.x2= random(width/2, (width/4)*3);
-
         this.x1 = position;
         this.x2 = position;
         this.leftLength = leftLength;
         this.rightLength = rightLength;
-        //    this.x2= (width*3)/4;  
     }
 
     translates(i) {
@@ -1606,9 +1084,6 @@ class Tree {
         } else if (i == 1) {
             translate(this.x2, height);
         }
-        //      else if (i==2) {
-        //      translate(this.x2, height);
-        //    }
     }
 
     branch(len) {
@@ -1619,7 +1094,6 @@ class Tree {
 
 
         if (len > 10) {
-
             push();
             rotate(this.angle);
             this.branch(len * this.leftLength); //0.5(origin)
